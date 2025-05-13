@@ -1,0 +1,5 @@
+﻿Program pyta uzytkownika w jakim jest wieku. Po wpisaniu wieku program odpowiada.
+Jesli wiek wpisany jest rowny 1 wypisuje bobas.
+Jesli wiek wpisany jest wiekszy od 1 a mniejszy od 18 wypisuje dziecko.
+Jesli wiek jest wiekszy od 18 a mniejszy od 65 wypisuje dorosly.
+Jesli wiek jest wiekszy od 65 wypisuje stary.

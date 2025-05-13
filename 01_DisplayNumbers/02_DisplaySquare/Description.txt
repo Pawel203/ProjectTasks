@@ -1,0 +1,1 @@
+﻿Wyswietlenie kwadratu pustego w srodku przy uzyciu petli i gwiazdek

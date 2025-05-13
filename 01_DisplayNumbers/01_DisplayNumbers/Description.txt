@@ -1,0 +1,1 @@
+﻿Wyswietlenie liczb od 0 do 100 i od 100 do 0 w jedenj petli

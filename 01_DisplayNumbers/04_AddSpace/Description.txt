@@ -1,0 +1,2 @@
+﻿Program pyta o wpisanie dowolnego ciagu znakow. 
+Po czym wypisuje je dodajac spacje po kazdym ze znakow
