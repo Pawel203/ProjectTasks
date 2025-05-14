@@ -1,0 +1,8 @@
+﻿Program symulujacy zycie zoo.
+W zoo sa zwierzeta: lew, malpa, papuga.
+Program co 5s wyswietla czy zwierze jest glodne czy tez nie.
+Lew jest glodny co 100s.
+Malpa co 50s.
+Papuga co 20s.
+
+Program co 50s pyta uzytkownika ktore zwierze nakarmic.
