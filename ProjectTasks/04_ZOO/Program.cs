@@ -12,23 +12,21 @@ namespace _04_ZOO
         static void Main(string[] args)
         {
             Zoo.LifeInZoo();
-
-
         }
     }
 
     static class Zoo
     {
-        static int hungryLion = 0;
-        static int hungryMonkey = 0;
-        static int hungryParrot = 0;
-        static int feedTime = 0;
+        private static int hungryLion = 0;
+        private static int hungryMonkey = 0;
+        private static int hungryParrot = 0;
+        private static int feedTime = 0;
 
         public static void LifeInZoo()
         {
             while (true)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(1000);
                 hungryLion++;
                 hungryMonkey++;
                 hungryParrot++;
@@ -61,7 +59,15 @@ namespace _04_ZOO
 
                 Console.WriteLine();
 
-                if (feedTime >= 10)
+                FeedTime();
+            }
+        }
+        public static void FeedTime()
+        {
+            if (feedTime >= 10)
+            {
+                int odpowiedz;
+                do
                 {
                     Console.WriteLine("Ktore zwierze chcesz nakarmic:");
                     Console.WriteLine("1. Lew");
@@ -69,7 +75,8 @@ namespace _04_ZOO
                     Console.WriteLine("3. Papuga");
                     Console.WriteLine();
 
-                    int odpowiedz = int.Parse(Console.ReadLine());
+                    odpowiedz = int.Parse(Console.ReadLine());
+
                     if (odpowiedz == 1)
                     {
                         hungryLion = 0;
@@ -88,7 +95,12 @@ namespace _04_ZOO
                         feedTime = 0;
                         Console.WriteLine("Papuga zostala nakarmiona \n");
                     }
+                    else
+                    {
+                        Console.WriteLine("Nie ma takiego zwierzecia \n");
+                    }
                 }
+                while (odpowiedz != 1 && odpowiedz != 2 && odpowiedz != 3);
             }
         }
     }
