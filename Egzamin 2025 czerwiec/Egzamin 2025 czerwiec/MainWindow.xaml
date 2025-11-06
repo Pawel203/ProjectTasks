@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
@@ -19,6 +19,10 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Margin="15">Podaj wartość klucza</TextBlock>
+            <TextBox Grid.Row="1" Margin="15" Width="50"></TextBox>
+            <TextBlock Grid.Row="2" Margin="15">Podaj wartość klucza</TextBlock>
+            <TextBox Grid.Row="3" Margin="15"></TextBox>
         </Grid>
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
@@ -26,6 +30,10 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Margin="15">Podaj wartość klucza</TextBlock>
+            <TextBox Grid.Row="1" Margin="15"></TextBox>
+            <Button Grid.Row="2" Margin="15" Width="200">Zapisz szyfr w pliku</Button>
         </Grid>
+        <Button Grid.Column="1" Width="100" Height="20">Szyfruj</Button>
     </Grid>
 </Window>
