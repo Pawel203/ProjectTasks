@@ -1,0 +1,30 @@
+﻿<Window x:Class="test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nagłówek" Background="LightGray" Padding="10" Grid.Row="0"/>
+        <DockPanel Grid.Row="1">
+            <StackPanel DockPanel.Dock="Left" Width="150" Background="#EEE">
+                <Button Content="Menu 1" Margin="0,5"/>
+                <Button Content="Menu 2" Margin="0,5"/>
+            </StackPanel>
+            <WrapPanel Margin="10">
+                <Button Content="Kafelek 1" Width="100" Height="50" Margin="5"/>
+                <Button Content="Kafelek 2" Width="100" Height="50" Margin="5"/>
+                <Button Content="Kafelek 3" Width="100" Height="50" Margin="5"/>
+            </WrapPanel>
+        </DockPanel>
+        <TextBlock Text="Stopka ©2025" Background="LightGray" Padding="10" Grid.Row="2"/>
+    </Grid>
+</Window>
