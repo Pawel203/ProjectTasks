@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Egzamin_2025_czerwiec"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Szyfrowanie. Wykonane przez Paweł Owczarzak" Height="450" Width="800"
+        Background="CadetBlue">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -19,10 +20,10 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Margin="15">Podaj wartość klucza</TextBlock>
+            <TextBlock Grid.Row="0" Margin="15" Foreground="AntiqueWhite" FontSize="20">Podaj wartość klucza</TextBlock>
             <TextBox Grid.Row="1" Margin="15" Width="50"></TextBox>
-            <TextBlock Grid.Row="2" Margin="15">Podaj wartość klucza</TextBlock>
-            <TextBox Grid.Row="3" Margin="15"></TextBox>
+            <TextBlock Grid.Row="2" Margin="15" Foreground="AntiqueWhite" FontSize="20">Podaj wartość klucza</TextBlock>
+            <TextBox Grid.Row="3" Margin="15" TextChanged="TextBox_TextChanged" TextWrapping="Wrap"></TextBox>
         </Grid>
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
@@ -30,10 +31,19 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Margin="15">Podaj wartość klucza</TextBlock>
-            <TextBox Grid.Row="1" Margin="15"></TextBox>
-            <Button Grid.Row="2" Margin="15" Width="200">Zapisz szyfr w pliku</Button>
+            <TextBlock Grid.Row="0" Margin="15" Foreground="AntiqueWhite" FontSize="20">Podaj wartość klucza</TextBlock>
+            <Border 
+                Grid.Row="1" 
+                CornerRadius="20" 
+                Background="CadetBlue" 
+                BorderBrush="AntiqueWhite" 
+                BorderThickness="3"
+                Margin="15"
+                Padding="20">
+                <TextBlock Foreground="AliceBlue" FontSize="14"/>
+            </Border>
+            <Button Grid.Row="2" Margin="15" Width="200" Background="LightBlue">Zapisz szyfr w pliku</Button>
         </Grid>
-        <Button Grid.Column="1" Width="100" Height="20">Szyfruj</Button>
+        <Button Grid.Column="1" Width="100" Height="20" Background="LightBlue">Szyfruj</Button>
     </Grid>
 </Window>
