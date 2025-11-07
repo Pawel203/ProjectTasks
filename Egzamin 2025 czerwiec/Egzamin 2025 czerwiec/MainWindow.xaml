@@ -21,9 +21,9 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Margin="15" Foreground="AntiqueWhite" FontSize="20">Podaj wartość klucza</TextBlock>
-            <TextBox Grid.Row="1" Margin="15" Width="50"></TextBox>
-            <TextBlock Grid.Row="2" Margin="15" Foreground="AntiqueWhite" FontSize="20">Podaj wartość klucza</TextBlock>
-            <TextBox Grid.Row="3" Margin="15" TextChanged="TextBox_TextChanged" TextWrapping="Wrap"></TextBox>
+            <TextBox Grid.Row="1" Margin="15" Width="50" x:Name="klucz"></TextBox>
+            <TextBlock Grid.Row="2" Margin="15" Foreground="AntiqueWhite" FontSize="20">Podaj tekst</TextBlock>
+            <TextBox Grid.Row="3" Margin="15" TextWrapping="Wrap" x:Name="tekst"></TextBox>
         </Grid>
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
@@ -40,10 +40,10 @@
                 BorderThickness="3"
                 Margin="15"
                 Padding="20">
-                <TextBlock Foreground="AliceBlue" FontSize="14"/>
+                <TextBlock Foreground="AliceBlue" FontSize="14" x:Name="zaszyfrowany_tekst"/>
             </Border>
-            <Button Grid.Row="2" Margin="15" Width="200" Background="LightBlue">Zapisz szyfr w pliku</Button>
+            <Button Grid.Row="2" Margin="15" Width="200" Background="LightBlue" Click="zapisz">Zapisz szyfr w pliku</Button>
         </Grid>
-        <Button Grid.Column="1" Width="100" Height="20" Background="LightBlue">Szyfruj</Button>
+        <Button Grid.Column="1" Width="100" Height="20" Background="LightBlue" Click="szyfruj">Szyfruj</Button>
     </Grid>
 </Window>
