@@ -25,26 +25,47 @@ namespace Egzamin_2025_czerwiec
             InitializeComponent();
         }
 
-        private void szyfruj(object sender, RoutedEventArgs e)
+        public void szyfruj(object sender, RoutedEventArgs e)
         {
             int key;
-            string text = tekst.Text;
-            char[] alfabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'w', 'y', 'z'};
+            string text = tekst.Text; 
             if (klucz.Text == null)
             {
                 key = 0;
             }
             else
             {
-                key = int.Parse(klucz.Text);
+                key = int.Parse(klucz.Text)%26;
             }
+            string wynik = szyfrCezara(text, key);
+            zaszyfrowany_tekst.Text = wynik;
+        }
 
-            zaszyfrowany_tekst.Text = key.ToString();
+        public string szyfrCezara(string text, int key)
+        {
+            char[] litery = text.ToCharArray();
+            char[] alfabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            char spracja = ' ';
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (litery[i] == spracja)
+                {
+                    litery[i] = spracja;
+                }
+                else
+                {
+                    int pozycja = Array.IndexOf(alfabet, text[i]);
+                    litery[i] = alfabet[pozycja + key];
+                }
+
+            }
+            text = new string(litery);
+            return text;
         }
 
         private void zapisz(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }
