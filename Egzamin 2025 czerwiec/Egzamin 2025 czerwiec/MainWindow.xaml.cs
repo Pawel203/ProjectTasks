@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,7 +67,14 @@ namespace Egzamin_2025_czerwiec
 
         private void zapisz(object sender, RoutedEventArgs e)
         {
-            
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Plik tekstowy (*.txt)|*.txt";
+            saveFileDialog.Title = "Zapisz szyfr w pliku";
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, zaszyfrowany_tekst.Text);
+            }
         }
     }
 }
